@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Which reviews have deadlines but unresolved screening disagreements?",
+    "command": "npm run reviews -- conflicts"
+  },
+  {
+    "question": "Who has overdue screening work across our reviews?",
+    "command": "npm run reviews -- owner-load"
+  },
+  {
+    "question": "Which reports need another reviewer before full-text retrieval?",
+    "command": "npm run reviews -- screening-queue"
+  },
+  {
+    "question": "Which included reports have an unchecked extracted value?",
+    "command": "npm run reviews -- extraction-check"
+  },
+  {
+    "question": "Which searches have passed our own refresh interval?",
+    "command": "npm run reviews -- search-refresh"
+  },
+  {
+    "question": "Which report requests have stalled with each owner?",
+    "command": "npm run reviews -- fulltext-chase"
+  },
+  {
+    "question": "How many reports sit at each decision stage, with study groupings kept separate?",
+    "command": "npm run reviews -- flow"
+  },
+  {
+    "question": "Which reviews still need appraisal or study-link evidence?",
+    "command": "npm run reviews -- compliance"
+  },
+  {
+    "question": "What changed when a reviewer revised an earlier decision?",
+    "command": "npm run reviews -- activity"
+  },
+  {
+    "question": "Which review packs are ready for a human methodology check?",
+    "command": "npm run reviews -- ready"
+  }
+]

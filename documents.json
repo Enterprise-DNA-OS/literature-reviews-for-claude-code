@@ -1,11 +1,60 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "for_each": "select id,code from reviews order by code",
+    "file": "code",
+    "name": "review-protocol",
+    "title": "Review protocol record",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Question and methods",
+        "sql": "select name,owner,question,criteria,protocol_ref,due_on,refresh_days from reviews where id=$1",
+        "layout": "record"
+      },
+      {
+        "title": "Search register",
+        "sql": "select name,query,searched_on,records_found,evidence_ref from searches where review_id=$1 order by code"
+      }
+    ]
+  },
+  {
+    "for_each": "select id,code from reviews order by code",
+    "file": "code",
+    "name": "exclusion-log",
+    "title": "Report exclusion log",
+    "sections": [
+      {
+        "title": "Exclusions",
+        "sql": "select code,name,status,exclusion_reason from record_status where review_id=$1 and status in ('abstract_excluded','fulltext_excluded') order by code"
+      },
+      {
+        "title": "Decision evidence",
+        "sql": "select r.code,v.stage,v.reviewer,v.decision,v.reason from votes v join records r on r.id=v.record_id where r.review_id=$1 order by r.code,v.stage,v.reviewer"
+      }
+    ]
+  },
+  {
+    "for_each": "select id,code from reviews order by code",
+    "file": "code",
+    "name": "evidence-pack",
+    "title": "Draft review evidence pack",
+    "sections": [
+      {
+        "title": "Included reports",
+        "sql": "select code,name,study_key,fulltext_ref from record_status where review_id=$1 and status='included' order by code"
+      },
+      {
+        "title": "Extracted values",
+        "sql": "select r.code,e.field,e.value,e.source_ref,e.extractor,e.checked_by,e.checked_on from extractions e join record_status r on r.id=e.record_id where r.review_id=$1 and r.status='included' order by r.code,e.field"
+      },
+      {
+        "title": "Appraisals",
+        "sql": "select r.code,a.tool,a.judgement,a.rationale,a.source_ref,a.reviewer from appraisals a join record_status r on r.id=a.record_id where r.review_id=$1 and r.status='included' order by r.code"
+      },
+      {
+        "title": "Open checks",
+        "sql": "select reference,rule,source,detail from compliance_findings where review_id=$1 order by rule,reference",
+        "note": "Internal draft. Reporting support only. Human methodological review remains required."
+      }
     ]
   }
 ]

@@ -1,13 +1,41 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Literature Reviews for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Literature review week",
+    "subtitle": "Synthetic demonstration records until your own data is imported.",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Review deadlines",
+        "sql": "select * from review_week order by due_on"
+      },
+      {
+        "title": "Decision queue",
+        "sql": "select review,code,name,owner,status,due_on from record_status where status like '%pending' or status like '%conflict' order by due_on"
+      }
+    ]
+  },
+  {
+    "name": "reporting-checks",
+    "title": "Reporting checks",
+    "sections": [
+      {
+        "title": "Findings",
+        "sql": "select r.code review,c.reference,c.rule,c.detail from compliance_findings c join reviews r on r.id=c.review_id order by review,rule"
+      },
+      {
+        "title": "Extraction checks",
+        "sql": "select * from extraction_queue order by code,field"
+      }
+    ]
+  },
+  {
+    "name": "flow",
+    "title": "Review flow counts",
+    "sections": [
+      {
+        "title": "Reports by status",
+        "sql": "select review,status,count(*)::integer reports,count(distinct nullif(study_key,''))::integer linked_studies from record_status group by review,status order by review,status",
+        "note": "Counts cover records held here. They are not a complete PRISMA flow diagram. Study keys group multiple reports."
       }
     ]
   }

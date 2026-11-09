@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-11-09T03:08:14.276Z",
+  "data": "Synthetic library access reports from supabase/seed.sql",
+  "screens": [
+    {
+      "title": "The review week",
+      "ask": "Which reviews are due, and where are decisions still waiting?",
+      "command": "npm run reviews -- weekly-review",
+      "output": "  review      name                            owner      due_on      records  included  conflicts  waiting\n  ----------  ------------------------------  ---------  ----------  -------  --------  ---------  -------\n  REV-ACCESS  Library access evidence review  Mara Chen  2026-11-19  6        1         1          2"
+    },
+    {
+      "title": "Resolve disagreements",
+      "ask": "Which reports need a third reviewer to settle a disagreement?",
+      "command": "npm run reviews -- conflicts",
+      "output": "  review      code     name                    abstract_decision  fulltext_decision  owner   \n  ----------  -------  ----------------------  -----------------  -----------------  --------\n  REV-ACCESS  REC-002  Library opening survey  conflict           pending            Leo Park"
+    },
+    {
+      "title": "Find unchecked evidence",
+      "ask": "Which included reports still need their extracted values checked?",
+      "command": "npm run reviews -- extraction-check",
+      "output": "  review      code     name                           owner      field         value            extractor  source_ref          checked_by  checked_on\n  ----------  -------  -----------------------------  ---------  ------------  ---------------  ---------  ------------------  ----------  ----------\n  REV-ACCESS  REC-001  Regional library access pilot  Mara Chen  access_model  Evening opening  mara chen  demo:report-001 p2"
+    }
+  ]
+}

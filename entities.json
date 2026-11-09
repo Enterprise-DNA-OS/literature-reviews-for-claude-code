@@ -1,0 +1,890 @@
+[
+  {
+    "table_name": "activity",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "activity",
+    "column_name": "review_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "activity",
+    "column_name": "actor",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "activity",
+    "column_name": "action",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "activity",
+    "column_name": "details",
+    "data_type": "jsonb",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "activity",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "activity",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "record_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "tool",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "judgement",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "rationale",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "reviewer",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "source_ref",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "appraisals",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "compliance_findings",
+    "column_name": "review_id",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "compliance_findings",
+    "column_name": "reference",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "compliance_findings",
+    "column_name": "rule",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "compliance_findings",
+    "column_name": "source",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "compliance_findings",
+    "column_name": "detail",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "review",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "code",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "name",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "owner",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "field",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "value",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "extractor",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "source_ref",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "checked_by",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extraction_queue",
+    "column_name": "checked_on",
+    "data_type": "date",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "record_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "field",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "value",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "source_ref",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "extractor",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "checked_by",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "checked_on",
+    "data_type": "date",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "extractions",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "review_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "source",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "sha256",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "row_count",
+    "data_type": "integer",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "actor",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "imports",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "review_id",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "search_id",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "code",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "name",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "authors",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "year",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "doi",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "external_key",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "study_key",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "owner",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "due_on",
+    "data_type": "date",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "abstract",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "fulltext_ref",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "retrieval_status",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "retrieval_note",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "duplicate_of",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "source_row",
+    "data_type": "jsonb",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "review",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "abstract_decision",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "abstract_votes",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "fulltext_decision",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "fulltext_votes",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "exclusion_reason",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "record_status",
+    "column_name": "status",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "records",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "review_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "search_id",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "records",
+    "column_name": "code",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "name",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "authors",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "year",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "records",
+    "column_name": "doi",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "external_key",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "study_key",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "owner",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "due_on",
+    "data_type": "date",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "abstract",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "fulltext_ref",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "retrieval_status",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "retrieval_note",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "duplicate_of",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "records",
+    "column_name": "source_row",
+    "data_type": "jsonb",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "records",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "record_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "stage",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "reviewer",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "decision",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "reason",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "resolutions",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "review",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "name",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "owner",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "due_on",
+    "data_type": "date",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "records",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "included",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "conflicts",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "review_week",
+    "column_name": "waiting",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "code",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "name",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "owner",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "question",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "criteria",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "protocol_ref",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "due_on",
+    "data_type": "date",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "refresh_days",
+    "data_type": "integer",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "reviews",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "schema_migrations",
+    "column_name": "name",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "schema_migrations",
+    "column_name": "applied_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "screening_state",
+    "column_name": "record_id",
+    "data_type": "uuid",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "screening_state",
+    "column_name": "stage",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "screening_state",
+    "column_name": "votes",
+    "data_type": "integer",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "screening_state",
+    "column_name": "decision",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "screening_state",
+    "column_name": "reason",
+    "data_type": "text",
+    "is_nullable": "YES"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "review_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "code",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "name",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "query",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "searched_on",
+    "data_type": "date",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "records_found",
+    "data_type": "integer",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "evidence_ref",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "searches",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "record_id",
+    "data_type": "uuid",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "stage",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "reviewer",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "decision",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "reason",
+    "data_type": "text",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  },
+  {
+    "table_name": "votes",
+    "column_name": "updated_at",
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO"
+  }
+]
